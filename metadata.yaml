@@ -1,0 +1,8 @@
+name: astrbot_plugin_memguard
+display_name: 记忆守卫 MemGuard
+desc: 先判断该不该回忆，再决定记不记得。召回门控 + 污染隔离 + 离线评估，专门治「记性时好时坏」。
+short_desc: 把召回命中率从感觉变成可回归的指标
+version: 0.1.0
+author: LMXXXX-ops
+repo: https://github.com/LMXXXX-ops/astrbot_plugin_memguard
+astrbot_version: ">=4.5.7"

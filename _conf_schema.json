@@ -1,0 +1,52 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "总开关：关闭后不再注入记忆（仍可手动 /mem add）",
+    "default": true
+  },
+  "auto_capture": {
+    "type": "bool",
+    "description": "自动从用户消息里抽取事实。关闭后只保存 /mem add 与「记住：」指令",
+    "default": true
+  },
+  "scope": {
+    "type": "string",
+    "description": "记忆作用域：global=跨会话共享；session=只在当前会话使用",
+    "default": "global"
+  },
+  "max_items": {
+    "type": "int",
+    "description": "每次最多注入几条记忆",
+    "default": 4
+  },
+  "min_score": {
+    "type": "float",
+    "description": "召回最低分（0~1）。调高更保守，调低更积极",
+    "default": 0.34
+  },
+  "margin": {
+    "type": "float",
+    "description": "第一二名最小分差。分差过小时只取最佳一条",
+    "default": 0.04
+  },
+  "contamination_threshold": {
+    "type": "float",
+    "description": "污染分阈值（0~1）。超过则不写入记忆，只留日志",
+    "default": 0.55
+  },
+  "recency_half_life_days": {
+    "type": "float",
+    "description": "记忆新鲜度半衰期（天）",
+    "default": 120
+  },
+  "importance_weight": {
+    "type": "float",
+    "description": "重要度对排序的影响权重",
+    "default": 0.15
+  },
+  "debug": {
+    "type": "bool",
+    "description": "输出门控与隔离决策日志",
+    "default": false
+  }
+}
